@@ -118,73 +118,131 @@
 
     <section class="relative pt-36 pb-20 lg:pt-48 lg:pb-32 overflow-hidden border-b border-slate-800 bg-slate-950">
         
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_50%)]"></div>
-            
-            <div class="absolute bottom-0 right-0 w-[900px] lg:w-[1200px] max-w-none z-0 pointer-events-none translate-x-[15%] lg:translate-x-[10%] opacity-90">
-                 <img src="https://cgsmith.me/signature/crt-truck-black-transparent.png" alt="Coastal Response Towing Rollback" class="w-full h-auto drop-shadow-2xl">
-            </div>
-
-            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent z-0"></div>
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_50%)]"></div>
+        
+        <div class="absolute bottom-0 right-0 w-[900px] lg:w-[1200px] max-w-none z-0 pointer-events-none translate-x-[15%] lg:translate-x-[10%] opacity-90">
+             <img src="https://cgsmith.me/signature/crt-truck-black-transparent.png" class="w-full h-auto drop-shadow-2xl">
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-            
-            <div class="reveal">
-                <div class="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 px-4 py-1.5 rounded-full text-red-400 text-sm font-bold mb-8">
-                    <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span> 24/7 EMERGENCY TOWING
-                </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent z-0"></div>
+    </div>
 
-                <h1 class="text-5xl lg:text-7xl font-black uppercase italic leading-[0.9] tracking-tighter mb-6 text-white">
-                    Stranded? <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">We dispatch fast.</span>
-                </h1>
-                <p class="text-xl text-slate-300 font-medium mb-8 max-w-lg leading-relaxed drop-shadow-md">
-                    Professional towing, roadside assistance, recoveries, and transport service for drivers across Brunswick County and nearby coastal communities.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="tel:9104082022" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-8 py-4 rounded-xl font-black text-xl transition-all text-center flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(245,158,11,0.4)] relative overflow-hidden group">
-                        <i data-lucide="phone" class="w-6 h-6 relative z-10"></i> 
-                        <span class="relative z-10">CALL DISPATCH NOW</span>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- LEFT SIDE -->
+        <div>
+            <div class="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 px-4 py-1.5 rounded-full text-red-400 text-sm font-bold mb-6">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span> LIVE DISPATCH ACTIVE
+            </div>
+
+            <h1 class="text-5xl lg:text-7xl font-black uppercase italic leading-[0.9] tracking-tighter mb-6 text-white">
+                Stranded? <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+                    We dispatch immediately.
+                </span>
+            </h1>
+
+            <p class="text-xl text-slate-300 font-medium mb-8 max-w-lg leading-relaxed">
+                Real-time towing and roadside assistance across Wilmington & Brunswick County. 
+                Fast response. No waiting. No uncertainty.
+            </p>
+
+            <!-- ACTION BUTTONS -->
+<div class="mt-4">
+    <button id="radarBtn" class="w-full relative bg-slate-950/80 border border-slate-700 hover:border-blue-500 text-blue-400 font-bold py-4 rounded-2xl flex items-center justify-center gap-3 overflow-hidden group transition-all">
+        <div class="relative z-10 flex items-center gap-3" id="radarText">
+            <i data-lucide="crosshair" class="w-5 h-5"></i>
+            SHARE EXACT GPS LOCATION
+        </div>
+    </button>
+
+    <input
+        type="text"
+        id="gpsOutput"
+        class="hidden w-full bg-slate-950 border border-green-500/30 text-green-400 font-mono text-sm rounded-xl p-3 mt-3 text-center pointer-events-none"
+        readonly
+    >
+
+    <a
+        id="smsDispatchBtn"
+        href="#"
+        class="hidden w-full mt-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-4 rounded-2xl items-center justify-center gap-3 text-center transition-all"
+    >
+        <i data-lucide="message-square" class="w-5 h-5"></i>
+        TEXT DISPATCH NOW
+    </a>
+</div>
+
+            <!-- TRUST STRIP -->
+            <div class="mt-6 text-sm text-slate-400 flex flex-wrap gap-4">
+                <span>✔ Fully Insured</span>
+                <span>✔ Local Response</span>
+                <span>✔ 24/7 Coverage</span>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="relative z-20">
+
+            <!-- DISPATCH PANEL -->
+            <div class="bg-slate-900/80 backdrop-blur-xl border border-blue-500/30 rounded-3xl p-5 mb-4 shadow-[0_0_40px_rgba(37,99,235,0.2)]">
+                <div class="flex justify-between text-xs text-slate-400 mb-2">
+                    <span>DISPATCH STATUS</span>
+                    <span class="text-green-400 animate-pulse">ACTIVE</span>
+                </div>
+                <div class="text-white font-mono text-sm space-y-1">
+                    <div>UNIT: BRAVO-2</div>
+                    <div>ETA: 18 MINUTES</div>
+                    <div>ZONE: BRUNSWICK COUNTY</div>
+                </div>
+            </div>
+
+            <!-- SERVICE GRID -->
+            <div class="bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 shadow-[0_0_50px_rgba(0,0,0,0.7)]">
+                <div class="grid grid-cols-2 gap-4">
+
+                    <a href="tel:9104082022" class="bg-slate-800 hover:bg-blue-600/30 border border-slate-700 rounded-2xl p-5 text-center font-bold text-white">
+                        Breakdown
                     </a>
-                </div>
-            </div>
 
-            <div class="reveal delay-100 relative z-20">
-                <div class="bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 shadow-[0_0_50px_rgba(0,0,0,0.7)]">
-                    <h3 class="text-slate-300 font-bold uppercase tracking-widest text-xs mb-4 text-center">How can we help?</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <a href="tel:9104082022" class="bg-slate-800/80 hover:bg-blue-600/30 hover:border-blue-500/50 border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 transition-all group cursor-pointer text-center">
-                            <i data-lucide="car-front" class="w-8 h-8 text-blue-400 group-hover:scale-110 transition-transform"></i>
-                            <span class="font-bold text-sm uppercase text-white">Breakdown</span>
-                        </a>
-                        <a href="tel:9104082022" class="bg-slate-800/80 hover:bg-amber-500/30 hover:border-amber-500/50 border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 transition-all group cursor-pointer text-center">
-                            <i data-lucide="alert-triangle" class="w-8 h-8 text-amber-500 group-hover:scale-110 transition-transform"></i>
-                            <span class="font-bold text-sm uppercase text-white">Accident</span>
-                        </a>
-                        <a href="tel:9104082022" class="bg-slate-800/80 hover:bg-blue-600/30 hover:border-blue-500/50 border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 transition-all group cursor-pointer text-center">
-                            <i data-lucide="battery-charging" class="w-8 h-8 text-blue-400 group-hover:scale-110 transition-transform"></i>
-                            <span class="font-bold text-sm uppercase text-white">Jump Start</span>
-                        </a>
-                        <a href="tel:9104082022" class="bg-slate-800/80 hover:bg-blue-600/30 hover:border-blue-500/50 border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center gap-3 transition-all group cursor-pointer text-center">
-                            <i data-lucide="key" class="w-8 h-8 text-blue-400 group-hover:scale-110 transition-transform"></i>
-                            <span class="font-bold text-sm uppercase text-white">Lockout</span>
-                        </a>
-                    </div>
+                    <a href="tel:9104082022" class="bg-slate-800 hover:bg-amber-500/30 border border-slate-700 rounded-2xl p-5 text-center font-bold text-white">
+                        Accident
+                    </a>
 
-                    <div class="mt-4">
-                        <button id="radarBtn" class="w-full relative bg-slate-950/80 border border-slate-700 hover:border-blue-500 text-blue-400 font-bold py-4 rounded-2xl flex items-center justify-center gap-3 overflow-hidden group transition-all">
-                            <div class="relative z-10 flex items-center gap-3" id="radarText">
-                                <i data-lucide="crosshair" class="w-5 h-5"></i>
-                                SHARE EXACT GPS LOCATION
-                            </div>
-                        </button>
-                        <input type="text" id="gpsOutput" class="hidden w-full bg-slate-950 border border-green-500/30 text-green-400 font-mono text-sm rounded-xl p-3 mt-3 text-center pointer-events-none" readonly>
-                    </div>
+                    <a href="tel:9104082022" class="bg-slate-800 hover:bg-blue-600/30 border border-slate-700 rounded-2xl p-5 text-center font-bold text-white">
+                        Jump Start
+                    </a>
+
+                    <a href="tel:9104082022" class="bg-slate-800 hover:bg-blue-600/30 border border-slate-700 rounded-2xl p-5 text-center font-bold text-white">
+                        Lockout
+                    </a>
+
                 </div>
+
+                <!-- GPS BUTTON -->
+                <button onclick="sendLocation()" class="mt-4 w-full bg-slate-950 border border-blue-500 text-blue-400 font-bold py-4 rounded-2xl">
+                    📍 SEND MY LOCATION
+                </button>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<script>
+function sendLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            window.location.href = `sms:9104082022?body=I need a tow. My location: https://maps.google.com/?q=${lat},${lon}`;
+        });
+    } else {
+        alert("Location not supported");
+    }
+}
+</script>
 
     <div class="bg-blue-600 py-3 border-y border-blue-500 overflow-hidden">
         <div class="marquee-container text-white font-bold tracking-widest uppercase text-sm">
@@ -238,151 +296,392 @@
         </div>
     </section>
 
-    <section id="services" class="py-24 bg-slate-900 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16 reveal">
-                <h2 class="text-amber-500 font-bold tracking-widest uppercase mb-2">Our Services</h2>
-                <h3 class="text-4xl md:text-5xl font-black uppercase italic">Ready for the Road, Shoulder, and Coast</h3>
+    <section id="services" class="relative py-24 bg-slate-900 border-t border-slate-800 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-blue-600/10 blur-3xl rounded-full"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10 reveal">
+            <div class="flex flex-wrap gap-3 mb-6">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-700 bg-slate-950 text-slate-300 text-xs font-bold uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Rapid Response Coverage
+                </span>
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-700 bg-slate-950 text-slate-300 text-xs font-bold uppercase tracking-wider">
+                    Wilmington & Brunswick County
+                </span>
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-700 bg-slate-950 text-slate-300 text-xs font-bold uppercase tracking-wider">
+                    24/7 Dispatch
+                </span>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-slate-850 p-8 rounded-3xl border border-slate-800 hover:border-blue-500/50 transition-all group reveal">
-                    <i data-lucide="truck" class="w-12 h-12 text-blue-500 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="text-xl font-black uppercase mb-3 text-white">Light & Medium Duty Towing</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Passenger vehicles, SUVs, work vans, and small trucks transported with care using modern towing equipment.</p>
-                    <ul class="space-y-2 text-sm font-bold text-slate-300">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Accident Towing</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Dealer & Shop Transport</li>
-                    </ul>
+            <h2 class="text-amber-500 font-bold tracking-widest uppercase mb-2">Our Services</h2>
+            <h3 class="text-4xl md:text-5xl font-black uppercase italic text-white max-w-4xl leading-tight">
+                Ready for the road, shoulder, ditch, and coast.
+            </h3>
+            <p class="mt-5 text-slate-400 text-lg max-w-3xl leading-relaxed">
+                From breakdowns and collisions to recoveries and roadside help, Coastal Response Towing is built to respond quickly, communicate clearly, and move your vehicle safely.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-slate-950/80 backdrop-blur-sm p-8 rounded-3xl border border-slate-800 hover:border-blue-500/50 hover:-translate-y-1 transition-all group reveal shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
+                <div class="flex items-center justify-between mb-6">
+                    <i data-lucide="truck" class="w-12 h-12 text-blue-500 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">Transport</span>
                 </div>
-                <div class="bg-slate-850 p-8 rounded-3xl border border-slate-800 hover:border-amber-500/50 transition-all group reveal delay-100">
-                    <i data-lucide="anchor" class="w-12 h-12 text-amber-500 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="text-xl font-black uppercase mb-3 text-white">Recovery & Winch Service</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Sand, mud, shoulder, ditch, and off-road recovery performed with safety-first methods and the right equipment.</p>
-                    <ul class="space-y-2 text-sm font-bold text-slate-300">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Winch-Outs</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Vehicle Recovery</li>
-                    </ul>
+                <h4 class="text-xl font-black uppercase mb-3 text-white">Light &amp; Medium Duty Towing</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Careful transport for cars, SUVs, work vans, and small trucks using modern equipment and professional handling.
+                </p>
+                <ul class="space-y-3 text-sm font-bold text-slate-300">
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-amber-500"></i>
+                        Accident Towing
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-amber-500"></i>
+                        Dealer &amp; Shop Transport
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-amber-500"></i>
+                        Scheduled Vehicle Moves
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-950/80 backdrop-blur-sm p-8 rounded-3xl border border-slate-800 hover:border-amber-500/50 hover:-translate-y-1 transition-all group reveal delay-100 shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
+                <div class="flex items-center justify-between mb-6">
+                    <i data-lucide="anchor" class="w-12 h-12 text-amber-500 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">Recovery</span>
                 </div>
-                <div class="bg-slate-850 p-8 rounded-3xl border border-slate-800 hover:border-blue-500/50 transition-all group reveal delay-200">
-                    <i data-lucide="wrench" class="w-12 h-12 text-blue-500 mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="text-xl font-black uppercase mb-3 text-white">Roadside Assistance</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Fast help for common roadside problems when you do not need a full tow.</p>
-                    <ul class="space-y-2 text-sm font-bold text-slate-300">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Jump Starts</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Lockouts, Fuel Delivery, Tire Help</li>
-                    </ul>
+                <h4 class="text-xl font-black uppercase mb-3 text-white">Recovery &amp; Winch Service</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Recovery support for sand, mud, shoulders, ditches, and unstable surfaces with a safety-first approach.
+                </p>
+                <ul class="space-y-3 text-sm font-bold text-slate-300">
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-blue-500"></i>
+                        Winch-Outs
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-blue-500"></i>
+                        Off-Road Recovery
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-blue-500"></i>
+                        Vehicle Stabilization Support
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-950/80 backdrop-blur-sm p-8 rounded-3xl border border-slate-800 hover:border-blue-500/50 hover:-translate-y-1 transition-all group reveal delay-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
+                <div class="flex items-center justify-between mb-6">
+                    <i data-lucide="wrench" class="w-12 h-12 text-blue-500 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">Roadside</span>
+                </div>
+                <h4 class="text-xl font-black uppercase mb-3 text-white">Roadside Assistance</h4>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Quick help for roadside problems when a full tow is not the first step.
+                </p>
+                <ul class="space-y-3 text-sm font-bold text-slate-300">
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-amber-500"></i>
+                        Jump Starts
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-amber-500"></i>
+                        Lockouts
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4 text-amber-500"></i>
+                        Fuel Delivery &amp; Tire Help
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-10 reveal">
+            <div class="rounded-3xl border border-slate-800 bg-slate-950/80 backdrop-blur-sm p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+                <div>
+                    <p class="text-white text-xl font-black uppercase">Need immediate help?</p>
+                    <p class="text-slate-400 mt-1">Call dispatch now or send your location directly from your phone.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="tel:9104082022" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-6 py-3 rounded-xl font-black text-center">
+                        Call Dispatch
+                    </a>
+                    <a href="sms:9104082022" class="border border-slate-700 hover:border-blue-500 bg-slate-900 text-white px-6 py-3 rounded-xl font-bold text-center">
+                        Text for Service
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer id="contact" class="bg-slate-950 border-t border-slate-900 pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-blue-600 rounded-3xl p-8 md:p-16 text-center reveal relative overflow-hidden shadow-2xl shadow-blue-900/50 mb-20">
-                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-                <div class="relative z-10 flex justify-center mb-8">
+    <footer id="contact" class="relative bg-slate-950 border-t border-slate-900 pt-20 pb-10 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[300px] bg-blue-600/10 blur-3xl rounded-full"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- PRIMARY CTA PANEL -->
+        <div class="bg-gradient-to-br from-blue-600 via-blue-700 to-slate-900 rounded-3xl p-8 md:p-14 reveal relative overflow-hidden shadow-2xl shadow-blue-900/40 mb-16 border border-blue-500/20">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl translate-x-1/4 -translate-y-1/4"></div>
+
+            <div class="relative z-10">
+                <div class="flex justify-center mb-8">
                     <img src="https://cgsmith.me/signature/crt-logo.png" alt="Coastal Response Towing logo" class="h-28 md:h-36 w-auto drop-shadow-[0_0_25px_rgba(0,0,0,0.4)]">
                 </div>
-                <h2 class="relative z-10 text-4xl md:text-5xl font-black text-white uppercase italic mb-6">Need Service Now?</h2>
-                <p class="relative z-10 text-blue-100 font-medium text-lg mb-8 max-w-2xl mx-auto">Call now for dispatch assistance, roadside service, or towing support. We are ready to help 24 hours a day.</p>
-                <a href="tel:9104082022" class="relative z-10 inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-full font-black text-2xl hover:bg-slate-100 transition-transform transform hover:scale-105 shadow-xl">
-                    <i data-lucide="phone-call" class="w-6 h-6"></i> (910) 408-2022
-                </a>
-            </div>
 
-            <div class="grid md:grid-cols-2 justify-between items-end gap-8 border-t border-slate-800 pt-8">
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="https://cgsmith.me/signature/crt-logo.png" alt="Coastal Response Towing logo" class="h-8 w-auto">
-                    </div>
-                    <p class="text-slate-500 text-sm">Serving Leland, Wilmington, Brunswick County, and surrounding coastal communities.</p>
+                <div class="flex justify-center mb-5">
+                    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/10 text-blue-100 text-xs font-black uppercase tracking-[0.2em]">
+                        <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span>
+                        Dispatch Ready 24/7
+                    </span>
                 </div>
-                <div class="text-left md:text-right text-slate-600 text-sm font-bold uppercase tracking-widest">
-                    &copy; <span id="year"></span> Coastal Response Towing.<br> Fast Dispatch. Professional Service.
+
+                <h2 class="text-4xl md:text-5xl font-black text-white uppercase italic mb-5 text-center">
+                    Need service now?
+                </h2>
+
+                <p class="text-blue-100 font-medium text-lg mb-8 max-w-2xl mx-auto text-center leading-relaxed">
+                    Fast dispatch for towing, roadside assistance, recovery, and transport across Wilmington, Leland, Brunswick County, and nearby coastal communities.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                    <a href="tel:9104082022" class="inline-flex items-center justify-center gap-3 bg-white text-blue-700 px-8 py-4 rounded-2xl font-black text-xl hover:bg-slate-100 transition-transform hover:scale-[1.02] shadow-xl min-w-[240px]">
+                        <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        Call Dispatch
+                    </a>
+
+                    <a href="sms:9104082022" class="inline-flex items-center justify-center gap-3 bg-slate-950/50 border border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-xl hover:bg-slate-900/80 transition-all min-w-[240px]">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
+                        Text for Service
+                    </a>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-3 max-w-3xl mx-auto text-center">
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/30 px-4 py-3 text-sm font-bold text-blue-100 uppercase tracking-wider">
+                        Towing
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/30 px-4 py-3 text-sm font-bold text-blue-100 uppercase tracking-wider">
+                        Recovery
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/30 px-4 py-3 text-sm font-bold text-blue-100 uppercase tracking-wider">
+                        Roadside Assistance
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
 
-    <script>
-        lucide.createIcons();
+        <!-- LOWER FOOTER -->
+        <div class="grid lg:grid-cols-3 gap-8 border-t border-slate-800 pt-8">
+            <div>
+                <img src="https://cgsmith.me/signature/crt-logo.png" alt="Coastal Response Towing logo" class="h-9 w-auto mb-4">
+                <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                    Coastal Response Towing provides professional towing, recovery, and roadside support with fast dispatch and service-focused communication.
+                </p>
+            </div>
 
-        document.getElementById('year').textContent = new Date().getFullYear();
+            <div>
+                <h3 class="text-white text-sm font-black uppercase tracking-[0.2em] mb-4">Coverage Area</h3>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li>Leland, NC</li>
+                    <li>Wilmington, NC</li>
+                    <li>Brunswick County</li>
+                    <li>Nearby Coastal Communities</li>
+                </ul>
+            </div>
 
-        // Scroll animations
-        const reveals = document.querySelectorAll('.reveal');
+            <div class="lg:text-right">
+                <h3 class="text-white text-sm font-black uppercase tracking-[0.2em] mb-4">Contact</h3>
+                <div class="space-y-2 text-sm">
+                    <div>
+                        <a href="tel:9104082022" class="text-slate-300 hover:text-white font-bold">(910) 408-2022</a>
+                    </div>
+                    <div>
+                        <a href="sms:9104082022" class="text-slate-400 hover:text-white">Text dispatch directly</a>
+                    </div>
+                    <div class="text-slate-500 pt-2">
+                        24/7 emergency response
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div class="mt-8 pt-6 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold">
+            <div class="text-slate-600">
+                &copy; <span id="year"></span> Coastal Response Towing
+            </div>
+            <div class="text-slate-500 text-center">
+                Fast Dispatch • Professional Service • Coastal Coverage
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // ---------- Helpers ----------
+    const safeQuery = (selector) => document.querySelector(selector);
+    const safeQueryAll = (selector) => document.querySelectorAll(selector);
+
+    const refreshIcons = () => {
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    };
+
+    refreshIcons();
+
+    // ---------- Footer Year ----------
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+
+    // ---------- Scroll Reveal ----------
+    const reveals = safeQueryAll('.reveal');
+
+    if (reveals.length) {
         const revealOnScroll = () => {
             const windowHeight = window.innerHeight;
             const elementVisible = 100;
-            reveals.forEach(reveal => {
+
+            reveals.forEach((reveal) => {
                 const elementTop = reveal.getBoundingClientRect().top;
                 if (elementTop < windowHeight - elementVisible) {
                     reveal.classList.add('active');
                 }
             });
         };
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll();
 
-        // Pricing Estimator
-        const slider = document.getElementById('distanceSlider');
-        const distanceDisplay = document.getElementById('distanceDisplay');
-        const priceDisplay = document.getElementById('priceDisplay');
+        window.addEventListener('scroll', revealOnScroll, { passive: true });
+        revealOnScroll();
+    }
+
+    // ---------- Pricing Estimator ----------
+    const slider = document.getElementById('distanceSlider');
+    const distanceDisplay = document.getElementById('distanceDisplay');
+    const priceDisplay = document.getElementById('priceDisplay');
+
+    if (slider && distanceDisplay && priceDisplay) {
         const baseFee = 75;
         const perMileRate = 4;
 
-        slider.addEventListener('input', (e) => {
-            const miles = parseInt(e.target.value);
-            distanceDisplay.textContent = `${miles} Miles`;
+        const updatePricing = (miles) => {
             const total = baseFee + (miles * perMileRate);
+            distanceDisplay.textContent = `${miles} Miles`;
             priceDisplay.textContent = `$${total}`;
+        };
+
+        updatePricing(parseInt(slider.value || 0, 10));
+
+        slider.addEventListener('input', (e) => {
+            const miles = parseInt(e.target.value, 10) || 0;
+            updatePricing(miles);
         });
+    }
 
-        // GPS Location Feature
-        const radarBtn = document.getElementById('radarBtn');
-        const radarText = document.getElementById('radarText');
-        const gpsOutput = document.getElementById('gpsOutput');
+    // ---------- GPS / Location Sharing ----------
 
+    const radarBtn = document.getElementById('radarBtn');
+    const gpsOutput = document.getElementById('gpsOutput');
+    const smsDispatchBtn = document.getElementById('smsDispatchBtn');
+    const dispatchPhone = '9104082022';
+
+    const setRadarContent = (icon, text, extraIconClass = '') => {
+        radarBtn.innerHTML = `
+            <div class="relative z-10 flex items-center gap-3" id="radarText">
+                <i data-lucide="${icon}" class="w-5 h-5 ${extraIconClass}"></i>
+                ${text}
+            </div>
+        `;
+        lucide.createIcons();
+    };
+
+    if (radarBtn) {
         radarBtn.addEventListener('click', () => {
             radarBtn.classList.add('animate-radar', 'border-blue-500');
             radarBtn.classList.remove('hover:border-blue-500');
-            radarText.innerHTML = '<i data-lucide="loader" class="w-5 h-5 animate-spin"></i> LOCATING...';
-            lucide.createIcons();
+            setRadarContent('loader', 'LOCATING...', 'animate-spin');
 
             if ('geolocation' in navigator) {
                 navigator.geolocation.getCurrentPosition(
                     (position) => {
+                        const lat = position.coords.latitude.toFixed(5);
+                        const lng = position.coords.longitude.toFixed(5);
+                        const mapsUrl = `https://maps.google.com/?q=${lat},${lng}`;
+                        const smsBody = encodeURIComponent(
+                            `I need a tow. My location is: ${mapsUrl}`
+                        );
+
                         setTimeout(() => {
                             radarBtn.classList.remove('animate-radar', 'border-blue-500');
-                            radarBtn.classList.add('bg-green-500/10', 'border-green-500', 'text-green-500', 'pointer-events-none');
-                            radarText.innerHTML = '<i data-lucide="check-circle" class="w-5 h-5"></i> LOCATION SECURED';
-                            lucide.createIcons();
-                            
-                            gpsOutput.classList.remove('hidden');
-                            gpsOutput.value = `LAT: ${position.coords.latitude.toFixed(5)} | LNG: ${position.coords.longitude.toFixed(5)}`;
-                        }, 1200);
+                            radarBtn.classList.add(
+                                'bg-green-500/10',
+                                'border-green-500',
+                                'text-green-400'
+                            );
+
+                            setRadarContent('check-circle', 'LOCATION READY');
+
+                            if (gpsOutput) {
+                                gpsOutput.classList.remove('hidden');
+                                gpsOutput.value = `LOCATION READY • ${lat}, ${lng}`;
+                            }
+
+                            if (smsDispatchBtn) {
+                                smsDispatchBtn.href = `sms:${dispatchPhone}?body=${smsBody}`;
+                                smsDispatchBtn.classList.remove('hidden');
+                                smsDispatchBtn.classList.add('flex');
+                            }
+                        }, 1000);
                     },
-                    () => {
-                        radarBtn.classList.remove('animate-radar');
-                        radarText.innerHTML = '<i data-lucide="x-circle" class="w-5 h-5 text-red-500"></i> LOCATION FAILED - PLEASE CALL';
-                        lucide.createIcons();
+                    (error) => {
+                        radarBtn.classList.remove('animate-radar', 'border-blue-500');
+
+                        let failureText = 'LOCATION FAILED - PLEASE CALL';
+
+                        if (error.code === error.PERMISSION_DENIED) {
+                            failureText = 'LOCATION BLOCKED - ENABLE GPS';
+                        } else if (error.code === error.POSITION_UNAVAILABLE) {
+                            failureText = 'LOCATION UNAVAILABLE - PLEASE CALL';
+                        } else if (error.code === error.TIMEOUT) {
+                            failureText = 'LOCATION TIMED OUT - PLEASE CALL';
+                        }
+
+                        radarBtn.classList.add('border-red-500', 'text-red-400');
+                        setRadarContent('x-circle', failureText);
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 10000,
+                        maximumAge: 0
                     }
                 );
             } else {
-                alert('Location services not available on this device.');
+                radarBtn.classList.remove('animate-radar');
+                radarBtn.classList.add('border-red-500', 'text-red-400');
+                setRadarContent('x-circle', 'LOCATION NOT SUPPORTED');
             }
         });
+    }
 
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+    // ---------- Mobile Menu ----------
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = safeQueryAll('.mobile-link');
+
+    if (mobileMenuBtn && mobileMenu) {
         let isMenuOpen = false;
 
-        mobileMenuBtn.addEventListener('click', () => {
-            isMenuOpen = !isMenuOpen;
-            
+        const updateMenuState = () => {
             if (isMenuOpen) {
                 mobileMenu.classList.remove('hidden');
                 mobileMenu.classList.add('flex');
@@ -392,19 +691,22 @@
                 mobileMenu.classList.remove('flex');
                 mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
             }
-            lucide.createIcons(); 
+
+            refreshIcons();
+        };
+
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            updateMenuState();
         });
 
-        mobileLinks.forEach(link => {
+        mobileLinks.forEach((link) => {
             link.addEventListener('click', () => {
                 isMenuOpen = false;
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-                mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
-                lucide.createIcons();
+                updateMenuState();
             });
         });
-
-    </script>
+    }
+</script>
 </body>
 </html>
